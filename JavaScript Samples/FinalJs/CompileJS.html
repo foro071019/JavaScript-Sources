@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Button</title>
+</head>
+<style>
+    body{display: flex;padding: 20px; gap: 10px;width: 100%;}
+    section{width: 200px;height: 200px;display: flex;justify-content: center; align-items: center;flex-direction: column; border-radius: 10px; border: 1px solid black;}
+    button{background-color: #000000;color: #ffffff;border: 1px solid #ffffff;border-radius: 10px;padding: 10px;cursor: pointer;}
+</style>
+<body>
+
+<!-- Black Mode -->
+    <section>
+        <button class="darkmodeButton">Dark Mode</button>
+        <p>asdasdfsadf</p>
+    </section>
+
+
+    <script>
+    var darkmodeButton = document.getElementsByClassName("darkmodeButton")[0],
+        section = document.getElementsByTagName("section")[0];
+
+    function darkmode() {
+        if (darkmodeButton.textContent === "Dark Mode") {
+            darkmodeButton.textContent = "White Mode",
+            darkmodeButton.style.backgroundColor = "#ffffff";
+            darkmodeButton.style.color = "#000000";
+            section.style.backgroundColor = "#000000",
+            section.style.color = "#ffffff";
+        } else {
+            darkmodeButton.textContent = "Dark Mode",
+            darkmodeButton.style.backgroundColor = "#000000";
+            darkmodeButton.style.color = "#ffffff";
+            section.style.backgroundColor = "#ffffff",
+            section.style.color = "#000000";
+        }
+    }
+
+    darkmodeButton.addEventListener("click", darkmode);
+    </script>
+<!-- Black Mode -->
+
+<!-- digital time -->
+<section>
+    <div id="clock"></div>
+</section>
+
+
+<script>
+    function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+        var timeString = hours + ":" + minutes + ":" + seconds;
+
+        document.getElementById("clock").textContent = timeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to display the clock immediately
+    updateClock();
+</script>
+<!-- digital time -->
+
+<!--  -->
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+<section>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <span id="nameError" class="error"></span><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <span id="emailError" class="error"></span><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<script>
+// Add event listeners for input fields to validate in real-time
+document.getElementById("name").addEventListener("input", validateName);
+document.getElementById("email").addEventListener("input", validateEmail);
+
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var nameError = document.getElementById("nameError");
+    var emailError = document.getElementById("emailError");
+    var isValid = true;
+
+    // Validate name
+    if (name.trim() === "") {
+        nameError.textContent = "Name is required";
+        isValid = false;
+    } else {
+        nameError.textContent = ""; // Clear error if name is not empty
+    }
+
+    // Validate email
+    if (email.trim() === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+    } else if (!isValidEmail(email)) {
+        emailError.textContent = "Invalid email format";
+        isValid = false;
+    } else {
+        emailError.textContent = ""; // Clear error if email is not empty and valid
+    }
+
+    return isValid;
+}
+
+function validateName() {
+    var name = document.getElementById("name").value;
+    var nameError = document.getElementById("nameError");
+
+    if (name.trim() !== "") {
+        nameError.textContent = ""; // Clear error if name is not empty
+    }
+}
+
+function validateEmail() {
+    var email = document.getElementById("email").value;
+    var emailError = document.getElementById("emailError");
+
+    if (email.trim() !== "") {
+        emailError.textContent = ""; // Clear error if email is not empty
+    }
+}
+
+function isValidEmail(email) {
+    // Basic email format validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+</script>
+
+<!--  -->

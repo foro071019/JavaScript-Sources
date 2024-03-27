@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Mode Button</title>
+</head>
+<style>
+    body{display: flex;justify-content: center; align-items: center;flex-direction: column; height: 100vh;width: 100%;}
+    section{width: 100px;height: 100px;display: flex;justify-content: center; align-items: center;flex-direction: column; }
+</style>
+<body>
+<section>
+    <button class="darkmodeButton">Dark Mode</button>
+    <p>asdasdfsadf</p>
+</section>
+
+
+<script>
+var darkmodeButton = document.getElementsByClassName("darkmodeButton")[0],
+    section = document.getElementsByTagName("section")[0];
+
+function darkmode() {
+    if (darkmodeButton.textContent === "Dark Mode") {
+        darkmodeButton.textContent = "White Mode",
+        section.style.backgroundColor = "#000000",
+        section.style.color = "#ffffff";
+    } else {
+        darkmodeButton.textContent = "Dark Mode",
+        section.style.backgroundColor = "#ffffff",
+        section.style.color = "#000000";
+    }
+}
+
+darkmodeButton.addEventListener("click", darkmode);
+</script>
+
+</body>
+</html>
