@@ -1,0 +1,20 @@
+cloudfront:
+https://aws.amazon.com/cloudfront/
+Amazon CloudFront is a content delivery network (CDN) service built for high performance, security, and developer convenience.
+
+heroku:
+https://www.heroku.com/
+Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps — we're the fastest way to go from idea to URL, bypassing all those infrastructure headaches.
+
+infinityfree:
+https://dash.infinityfree.com/accounts
+Free server and hosting wordpress
+
+namecheap:
+https://www.namecheap.com/
+Cheap domain names
+
+deepl
+https://www.deepl.com/en/translator
+for translating a text
+

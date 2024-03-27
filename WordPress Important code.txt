@@ -1,0 +1,50 @@
+--------It will get the website name--------
+
+<?php bloginfo('name'); ?>
+
+--------------------------------------------
+
+--------It will get the tagline of ewbsite--------
+
+<?php bloginfo('description'); ?>
+
+--------------------------------------------------
+
+--------It will get the title of post--------
+
+<?php the_title(); ?>
+
+---------------------------------------------
+
+--------It will get the content of post--------
+
+<?php the_content(); ?>
+
+-----------------------------------------------
+
+--------It will get the url of the post--------
+
+<?php the_permalink(); ?>
+
+-----------------------------------------------
+
+--------Put this on file to get the header and footer--------
+
+<?php get_header(); ?>
+<?php get_footer(); ?>
+
+-------------------------------------------------------------
+
+--------It will load all what should laod in header such as CSS--------
+
+<?php wp_head(); ?>
+
+-----------------------------------------------------------------------
+
+--------It will get the image--------
+
+background-imag: url(<?php echo get_theme_file_uri('/images/sample.png') ?>);
+
+-------------------------------------
+
+

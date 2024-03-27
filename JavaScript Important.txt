@@ -1,0 +1,89 @@
+-------------------------------to pre load images----------------------------------------
+<script>
+    // Preload images
+    function preloadImages() {
+      var images = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg'
+        // Add more image URLs as needed
+      ];
+      images.forEach(function(image) {
+        new Image().src = image;
+      });
+    }
+    // Execute preloadImages function when the page loads
+    window.onload = preloadImages;
+  </script>
+-------------------------------to pre load images----------------------------------------
+
+-------------------------------to login ----------------------------------------
+
+ <script>
+
+alert("\n An authorized person can only access this page!");
+
+function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  if (username === "hii" && password === "Pword123!") {
+    document.getElementById("login-form").style.display = "none";
+ 
+document.getElementById("whole_table").style.display = "block";
+  } else {
+    alert("\n Login failed. Please check your username and password.");
+  }
+}
+
+</script>
+
+
+/* Login Form start */
+.wrapper {
+padding: 0;
+}
+#login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    background: linear-gradient(15deg, skyblue 0%, violet 90%, violet 100%);
+}
+
+#login-form .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #F8BC36;
+    width: 400px;
+    margin: 65px 200px 65px 200px;
+    padding: 21px;
+    border-radius: 20px;
+    border: 0.1px solid black;
+box-shadow: 0 0 20px black;
+}
+
+#login-form .card input {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0 solid;
+}
+
+
+/* Login Form End */
+
+
+
+    <form onsubmit="login(); return false;" id="login-form">
+        <div class="card">
+            <p style="font-weight: 700; font-size: x-large !important;">LogIn</p>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Type your Username" />
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Type your Password" />
+            <input class="login-button" type="submit" value="Login">
+        </div>
+    </form>
+-------------------------------to login ----------------------------------------
